@@ -284,7 +284,14 @@ header nav ul button {
   left: -30px;
 }
 
+footer {
+    padding: 1vh 0vh;
+    background-color: rgb(76, 76, 76);
+}
 
-
+footer p {
+    color: white;
+    font-size: 2vh;
+}
 
 
