@@ -40,7 +40,7 @@ header nav ul button {
   padding: 1vh;
   width: 100%;
   min-height: 120vh; 
-  background-image: url('images/caminhao-inicio.png');
+  background-image: url('../images/caminhao-inicio.png');
   background-size: cover;
   background-position: center;
   display: flex;
@@ -83,10 +83,12 @@ header nav ul button {
 }
 
 .container-1 aside p {
-    font-size: 3cap;
+    font-size: 4vh;
     text-indent: 3cap;
     text-align: left;
     margin-right: 39cap;
+    border: 2px solid rgb(87, 65, 65);
+    border-radius: 20px;
 }
 
 .container-1 img {
