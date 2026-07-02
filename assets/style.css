@@ -64,9 +64,11 @@ header nav ul button {
     width: 100%;
     color: white;
     font-size: 5vh;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
 }
 
 #quem-somos {
+    padding: 3vh;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -84,30 +86,30 @@ header nav ul button {
 }
 
 .container-1 {
+    width: 100%;
     display: flex;
-    flex-direction: row;
     position: relative;
+    gap: 3vh;
+    flex-direction: row;
     justify-content: center;
     align-items: center;
 }
 
 .container-1 aside p {
-    font-size: 4vh;
-    text-indent: 3cap;
+    position: relative;
+    font-size: 3vh;
+    text-indent: 3vh;
+    padding: 3vh;
     text-align: left;
-    margin-right: 39cap;
     border: 2px solid rgb(87, 65, 65);
     border-radius: 20px;
-    margin-left: 10vh;
-    padding: 4vh;
     font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif;
     box-shadow: 0 8px 16px 0 rgba(0,0,0,0.2);
 
 }
 
 .container-1 img {
-    position: absolute;
-    margin-left: 100vh;
+    position: relative;
     border-radius: 15px;
 }
 
@@ -153,6 +155,9 @@ header nav ul button {
 }
 
 .cards h3 {
+  overflow-wrap: break-word;
+  overflow: hidden;
+  max-width: 100%;
   display: flex;
   font-size: 2.5vh;
   justify-content: center;
