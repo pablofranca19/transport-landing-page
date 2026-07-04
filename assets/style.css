@@ -253,6 +253,11 @@ header nav ul button {
     font-family: 'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif
 }
 
+.fale-conosco-container form p {
+    font-size: 1vh;
+    font-family: "Adwaita Sans";
+}
+
 .fale-conosco-container input {
     font-size: 2vh;
     border-radius: 10px;
