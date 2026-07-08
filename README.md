@@ -1,4 +1,4 @@
-![Dax Code logo](logo-projeto.png)
+![Dax Code logo](images/logo-projeto.png)
 
 # TransRota - Landing Page de Logística
 
