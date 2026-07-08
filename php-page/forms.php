@@ -13,14 +13,6 @@ $formData = [
 try {
     $webhook = curl_init('http://n8n:5678/webhook/check-email');
 
-    $responsecode = trim(http_response_code(), characters: "int()");
-
-    if (curl_getinfo($webhook, CURLINFO_HTTP_CODE) != 200 || curl_getinfo($webhook, CURLINFO_HTTP_CODE) != 201) {
-        echo "<h2> Não foi possível enviar para o email " . $email . "</h2>";
-        echo "<p> Erro código " . var_dump($responsecode) . "</p>";
-        return;
-    }
-
     curl_setopt_array($webhook, [
         CURLOPT_POST => true,
         CURLOPT_RETURNTRANSFER => true,
@@ -32,6 +24,13 @@ try {
     ]);
 
     $response = curl_exec($webhook);
+    $responsecode = curl_getinfo($webhook, CURLINFO_RESPONSE_CODE);
+
+    if ($responsecode != 200 && $responsecode != 201) {
+        echo "<h2> Não foi possível enviar para o email " . $email . "</h2>";
+        echo "<p> Erro código " . var_dump($responsecode) . "</p>";
+        return;
+    }
 
 } catch (Exception $e) {
     error_log("Webhook error: " . $e->getMessage() . "\n cURL error: " . curl_error($webhook));
