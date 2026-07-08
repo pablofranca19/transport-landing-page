@@ -1,42 +1,42 @@
 ![Dax Code logo](images/logo-projeto.png)
 
-# TransRota - Landing Page de Logística
+# TransRota - Logistics Landing Page
 
-## O que é
+## What it is
 
-Uma landing page para uma empresa fictícia de transporte/logística, feita como projeto do curso Dax Code. Tem um site simples (HTML/CSS/JS) e um formulário de contato que funciona de verdade, mandando um e-mail automático pra quem preenche.
+A landing page for a fictional transport/logistics company, built as a Dax Code course project. It's a simple site (HTML/CSS/JS) with a contact form that actually works, sending an automatic email to whoever fills it in.
 
 ## Stack
 
-- **HTML** — estrutura da página
-- **CSS** — estilo e responsividade
-- **JavaScript (vanilla)** — validação do formulário no navegador
-- **PHP** — processa o formulário e conversa com o n8n
-- **n8n** — automação que recebe os dados e dispara o e-mail via SMTP
+- **HTML** — page structure
+- **CSS** — styling and responsiveness
+- **JavaScript (vanilla)** — form validation in the browser
+- **PHP** — processes the form and talks to n8n
+- **n8n** — automation that receives the data and triggers the email via SMTP
 
-## Como o formulário funciona
+## How the form works
 
-1. A pessoa preenche nome e e-mail.
-2. O `script.js` valida antes de deixar enviar.
-3. O formulário dá um POST pro `forms.php`.
-4. O `forms.php` sanitiza os dados, mostra uma mensagem de confirmação, e manda tudo via cURL pra um webhook do n8n.
-5. O n8n recebe e dispara um e-mail automático pro endereço informado.
+1. The person fills in name and email.
+2. `script.js` validates before allowing the submit.
+3. The form sends a POST to `forms.php`.
+4. `forms.php` sanitizes the data, shows a confirmation message, and sends everything via cURL to an n8n webhook.
+5. n8n receives it and triggers an automatic email to the address provided.
 
 ```
-Formulário -> validação JS -> POST -> forms.php -> webhook n8n -> e-mail automático
+Form -> JS validation -> POST -> forms.php -> n8n webhook -> automatic email
 ```
 
-## Validações
+## Validations
 
-- **No front-end (JavaScript)**: `verifyFields()` confere se nome e e-mail não estão vazios antes de permitir o envio, mostrando uma mensagem de erro embaixo do campo caso esteja em branco.
-- **No back-end (PHP)**:
-    - `htmlspecialchars()` nos dois campos antes de exibi-los de volta na tela, pra evitar que alguém injete HTML/JavaScript na resposta.
-    - Depois de chamar o webhook, o código confere o código de resposta HTTP (`200` ou `201`) antes de considerar que o e-mail foi enviado com sucesso — se vier outro código, mostra uma mensagem de erro em vez de fingir que deu tudo certo.
+- **On the front-end (JavaScript)**: `verifyFields()` checks that name and email aren't empty before allowing submission, showing an error message under the field if it's blank.
+- **On the back-end (PHP)**:
+  - `htmlspecialchars()` on both fields before displaying them back on screen, to prevent someone from injecting HTML/JavaScript into the response.
+  - After calling the webhook, the code checks the HTTP response code (`200` or `201`) before considering the email successfully sent — if a different code comes back, it shows an error message instead of pretending everything went fine.
 
-## Um comentário à parte
+## A side note
 
-Esse foi o primeiro projeto em que usei **PHP no back-end**, e foi bem legal trabalhar com ele. Mesmo sendo um projeto simples, deu pra sentir como o PHP se encaixa bem nesse tipo de tarefa direta — receber um formulário, processar os dados e se comunicar com outro serviço (no caso, o n8n) via cURL. Ajudou a entender melhor a lógica de request/response do lado do servidor, que é diferente de só mexer com JavaScript no navegador.
+This was the first project where I used **PHP on the back-end**, and it was pretty fun to work with. Even being a simple project, it gave me a feel for how well PHP fits this kind of straightforward task — receiving a form, processing the data, and talking to another service (in this case, n8n) via cURL. It helped me understand server-side request/response logic better, which is different from just working with JavaScript in the browser.
 
 ## Status
 
-Projeto de estudo, focado em praticar HTML/CSS/JS no front e um primeiro contato com PHP no back-end, incluindo integração com uma automação externa (n8n).
+Study project, focused on practicing HTML/CSS/JS on the front-end and a first hands-on experience with PHP on the back-end, including integration with an external automation tool (n8n).
