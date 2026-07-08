@@ -28,7 +28,7 @@ try {
 
     if ($responsecode != 200 && $responsecode != 201) {
         echo "<h2> Não foi possível enviar para o email " . $email . "</h2>";
-        echo "<p> Erro código " . var_dump($responsecode) . "</p>";
+        echo "<p> Erro código " . $responsecode . "</p>";
         return;
     }
 
