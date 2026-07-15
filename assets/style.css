@@ -1,3 +1,7 @@
+html {
+    scroll-behavior: smooth;
+}
+
 body {
   margin: 0;
   padding: 0;
@@ -10,13 +14,14 @@ header {
     display: flex;
     justify-content: center;
     align-items: center;
-    
+    position: fixed;
+    z-index: 1;
 }
 
 header p {
     width: 30%;
     color: white;
-    font-size: 10cap;
+    font-size: 6cap;
     font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     margin: 5vh 0vh;
 }
@@ -28,11 +33,14 @@ header nav ul {
 }
 
 header nav ul button {
-    font-size: 3vh;
+    font-size: 2.5vh;
     color: white;
     background-color: #545454;
     border-color: transparent;
     cursor: pointer;
+    padding: 1vh;
+    border: solid 2px rgb(153, 153, 153);
+    border-radius: 10px;
 }
 
 #inicio {
@@ -44,7 +52,7 @@ header nav ul button {
   inset: 0;
   background-size: cover;
   background-size: cover;
-  z-index: -1;
+  z-index: 0;
   background-position: center;
   display: flex;
   justify-content: center;
