@@ -25,18 +25,6 @@ function verifyFields() {
     }
 }
 
-
-function getSectionTop(selector) {
-  const el = document.querySelector(selector);
-  const headerHeight = document.querySelector('header').offsetHeight;
-  return el.getBoundingClientRect().top + window.scrollY - headerHeight;
-}
-
-console.log(getSectionTop('#inicio'));
-console.log(getSectionTop('#quem-somos'));
-console.log(getSectionTop('#nossos-serviços'));
-console.log(getSectionTop('#fale-conosco'));
-
 function scrollToSection(selector) {
   const el = document.querySelector(selector);
   const headerHeight = document.querySelector('header').offsetHeight;
