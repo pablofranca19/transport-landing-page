@@ -27,12 +27,12 @@ function verifyFields() {
 
 function scrollToSection(selector) {
   const el = document.querySelector(selector);
-  const headerHeight = document.querySelector('header').offsetHeight;
+  const headerHeight = document.querySelector("header").offsetHeight;
   const top = el.getBoundingClientRect().top + window.scrollY - headerHeight;
-  window.scrollTo({ top, behavior: 'smooth' });
+  window.scrollTo({ top, behavior: "smooth" });
 }
 
-document.querySelector('#inicio-botao').addEventListener("click", () => scrollToSection('#inicio'));
-document.querySelector('#quem-somos-botao').addEventListener("click", () => scrollToSection('#quem-somos'));
-document.querySelector('#servicos-botao').addEventListener("click", () => scrollToSection('#nossos-serviços'));
-document.querySelector('#contato-botao').addEventListener("click", () => scrollToSection('#fale-conosco'));
+document.querySelector('#inicio-botao').addEventListener("click", () => scrollToSection("#inicio"));
+document.querySelector('#quem-somos-botao').addEventListener("click", () => scrollToSection("#quem-somos"));
+document.querySelector('#servicos-botao').addEventListener("click", () => scrollToSection("#nossos-serviços"));
+document.querySelector('#contato-botao').addEventListener("click", () => scrollToSection("#fale-conosco"));
