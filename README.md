@@ -2,6 +2,8 @@
 
 # TransRota - Logistics Landing Page
 
+## NOTE: The project is not totally finished! My intent is to host it in order to work properly.
+
 ## What it is
 
 A landing page for a fictional transport/logistics company, built as a Dax Code course project. It's a simple site (HTML/CSS/JS) with a contact form that actually works, sending an automatic email to whoever fills it in.
